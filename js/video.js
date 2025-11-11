@@ -62,8 +62,9 @@ document.querySelector("#slider").addEventListener("input", function() {
 	let volumeValue = this.value / 100;
 	video.volume = volumeValue;
 	document.querySelector("#volume").textContent = (volumeValue * 100) + "%";
+	console.log(document.querySelector("#volume"))
 
-	console.log("new volume: " + video.volume*100)
+	console.log("The current value is " + video.volume)
 });
 
 

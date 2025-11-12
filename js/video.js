@@ -59,11 +59,12 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 document.querySelector("#slider").addEventListener("change", function() {
     video = document.querySelector("#player1");
-	console.log("The current value is " + (volumne * 100).toFixed(1) + "%");
-    let volumne = this.value / 100;
-    video.volume = volumne;
-    document.querySelector("#volume").textContent = (volumne * 100).toFixed(1) + "%";
-    console.log("The current value is " + (volumne * 100).toFixed(1) + "%");
+	volume = this.value / 100;
+	document.querySelector("#volume").innerHTML = this.value + "%";
+    video.volume = volume;
+    document.querySelector("#volume").textContent = (volume * 100) + "%";
+	console.log(document.querySelector("#volume"));
+    console.log("The current value is " + (volume * 100) + "%");
 });
 
 

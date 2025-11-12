@@ -57,15 +57,13 @@ document.querySelector("#mute").addEventListener("click", function() {
     }
 });
 
-document.querySelector("#slider").addEventListener("input", function() {
-	volume = document.querySelector("volume")
-	console.log("The current value is " + video.volume)
-	let volumeValue = this.value / 100;
-	video.volume = volumeValue;
-	document.querySelector("#volume").textContent = (volumeValue * 100) + "%";
-	console.log(document.querySelector("#volume"))
-
-	console.log("The current value is " + video.volume)
+document.querySelector("#slider").addEventListener("change", function() {
+    video = document.querySelector("#player1");
+	console.log("The current value is " + (volumne * 100).toFixed(1) + "%");
+    let volumne = this.value / 100;
+    video.volume = volumne;
+    document.querySelector("#volume").textContent = (volumne * 100).toFixed(1) + "%";
+    console.log("The current value is " + (volumne * 100).toFixed(1) + "%");
 });
 
 

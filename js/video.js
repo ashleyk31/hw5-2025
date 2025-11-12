@@ -64,7 +64,7 @@ document.querySelector("#slider").addEventListener("change", function() {
     video.volume = volume;
     document.querySelector("#volume").innerHTML = (volume * 100).toFixed(1) + "%";
 	console.log(document.querySelector("#volume"));
-    console.log("The current value is " + (video.volume));
+    console.log("The current value is " + (volume));
 });
 
 
